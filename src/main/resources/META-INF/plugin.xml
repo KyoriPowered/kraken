@@ -1,0 +1,24 @@
+<idea-plugin>
+    <depends>com.intellij.modules.java</depends>
+
+    <id>net.kyori.kraken</id>
+    <name>Kraken</name>
+    <vendor email="kashike@vq.lc">kashike</vendor>
+
+    <description><![CDATA[
+    I wanted some more things, so here are those things.
+    ]]></description>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <localInspection groupPath="Java"
+                         language="JAVA"
+                         shortName="AbstractParameterCanBeFinal"
+                         bundle="messages.Kraken"
+                         key="inspection.abstract_parameter_can_be_final.display_name"
+                         groupKey="group.kraken.name"
+                         enabledByDefault="true"
+                         level="WARNING"
+                         cleanupTool="true"
+                         implementationClass="net.kyori.kraken.inspection.AbstractParameterCanBeFinal"/>
+    </extensions>
+</idea-plugin>
