@@ -1,6 +1,7 @@
 plugins {
   id 'java'
-  id 'org.jetbrains.intellij' version '0.4.3'
+  id 'net.minecrell.licenser' version '0.4.1'
+  id 'org.jetbrains.intellij' version '0.4.10'
 }
 
 group 'net.kyori'
@@ -9,11 +10,18 @@ version '1.0.0-SNAPSHOT'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+license {
+  header file('header.txt')
+  include '**/*.java'
+  newLine false
+}
+
 repositories {
   mavenLocal()
   mavenCentral()
 }
 
 intellij {
-  version '2018.3.4'
+  version '2020.2'
+  plugins = ['java']
 }
